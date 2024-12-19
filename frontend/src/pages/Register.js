@@ -44,7 +44,8 @@ const Register = () => {
 
             if (status === "success") {
                 handleSuccess(message);
-                navigate('/login')
+                // navigate('/login')
+                setTimeout(() => navigate('/login'), 2000);
                 
             } else {
                 handleError(error?.details[0]?.message || message);

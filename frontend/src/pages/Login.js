@@ -48,7 +48,8 @@ const Login = () => {
             if (status === "success") {
                 handleSuccess(message); // Show success message
                 localStorage.setItem('token', jwtToken); // Save JWT token in local storage
-                navigate('/book-list')// Redirect to the book list 
+                // navigate('/book-list')// Redirect to the book list 
+                setTimeout(() => navigate('/book-list'), 2000); // Wait for 2 seconds
             } else {
                 handleError(message); // Show error message if login fails
             }
