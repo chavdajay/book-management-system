@@ -10,7 +10,7 @@ const BookList = () => {
         fetchBooks();
     }, [fetchBooks]);
 
-   
+    //This checks if books?.data is a valid array. If it is, it evaluates to true; otherwise, false.
     const bookList = Array.isArray(books?.data) ? books.data : [];
 
     const handleLogout = () => {

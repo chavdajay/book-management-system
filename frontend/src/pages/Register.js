@@ -7,13 +7,17 @@ const Register = () => {
     const navigate = useNavigate();
     const [signupInfo, setSignupInfo] = useState({ email: '', password: '', confirmPassword: '' });
 
+    //React forms handle changes in the input fields dynamically
     const handleChange = (e) => {
         const { name, value } = e.target;
         setSignupInfo({ ...signupInfo, [name]: value });
+        // [name]: value: Dynamically updates the field whose-
+        //  name matches the input's name attribute with the current value.
     };
 
     const handleSignup = async (e) => {
         e.preventDefault();
+        
         const { email, password, confirmPassword } = signupInfo;
 
         // Validation email, password, and confirmpassword required

@@ -15,7 +15,6 @@ const Login = () => {
         setLoginInfo({ ...loginInfo, [name]: value });
     };
 
-  
     const handleLogin = async (e) => {
         e.preventDefault(); // Prevents the default form submission behavior
 

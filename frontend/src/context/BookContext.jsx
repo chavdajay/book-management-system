@@ -41,7 +41,6 @@ export const BookProvider = ({ children }) => {
       console.error('Error adding book:', error.message);
     }
   };
-  
 
   return (
     <BookContext.Provider value={{ books, fetchBooks, addBook }}>
